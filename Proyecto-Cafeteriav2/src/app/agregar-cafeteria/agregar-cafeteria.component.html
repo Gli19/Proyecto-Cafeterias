@@ -1,0 +1,58 @@
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+   
+  
+    <section class="crud-cafeterias-container">
+        <div class="agregar-container">
+            
+            <form (ngSubmit)="onSubmit()" class="form-crud-cafe">
+                <h2 class="title-agregar">Agregar Cafeteria</h2>
+                <p class="img-cafe">Link img</p>
+                <input type="text" id="img-cafe" placeholder="Link de la imagen" class="input-agregar-cafe" [(ngModel)]="cafeteria.imagen" name="imagen">
+                <p class="nombre-cafe">Nombre</p>
+                <input type="text" id="nom-cafe" placeholder="Nombre de la Cafeteria" class="input-agregar-cafe" [(ngModel)]="cafeteria.nombre" name="nombre">
+                <p class="ubi-cafe">Ubicación</p>
+                <input type="text" id="des-ubi" placeholder="Ubicación de la Cafeteria" class="input-agregar-cafe" [(ngModel)]="cafeteria.direccion" name="direccion">
+                <p class="descripcion-cafe">Descripción</p>
+                <input type="text" id="des-cafe" placeholder="Descripción de la Cafeteria" class="input-agregar-cafe" [(ngModel)]="cafeteria.descripcion"  name="descripcion">
+                <button class="button-login">Agregar</button>
+            </form>
+        </div>
+
+
+        <div class="cafeterias-container">
+
+
+
+            <div class="cafes-card" *ngFor="let cafeteria of cafeterias">
+                
+                
+                
+                    <a (click)="productosCafeteria(cafeteria.id)">
+                    <img src="https://images.pexels.com/photos/2551794/pexels-photo-2551794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </a>
+                
+                    <div class="title-icons">
+                        <div>
+                            <p class="title-edit-cafe">{{cafeteria.nombre}}</p>
+                            
+                        </div> 
+
+        
+                        <div class="container-icons">
+                            <a (click)="cafeteriaId(cafeteria.id)" class="icon-img"><img src="../../assets/editar-icon.png" alt="" ></a>
+                            <a (click)="confirmacion(cafeteria.id)" class="icon-img"><img src="../../assets/eliminar-icon.png" alt=""></a>
+                        </div>
+                        
+                    </div>
+                
+                
+            
+            </div>
+
+            </div>
+
+
+        </section>

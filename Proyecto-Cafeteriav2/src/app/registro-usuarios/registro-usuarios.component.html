@@ -1,0 +1,22 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+<section class="crud-cafeterias-container">
+    <div class="agregar-container">
+        
+        <form  (ngSubmit)="onSubmit()" class="form-crud-cafe">
+            <h2 class="title-agregar">Datos de Registro</h2>
+            <p class="img-cafe">Nombre</p>
+            <input type="text" id="img-cafe" placeholder="Nombre del usuario" class="input-agregar-cafe" [(ngModel)]="usuario.nombre" name="nombre">
+            <p class="nombre-cafe">Correo</p>
+            <input type="email" id="nom-cafe" placeholder="Correo electronico" class="input-agregar-cafe" [(ngModel)]="usuario.correoElectronico" name="correoElectronico">
+            <p class="ubi-cafe">Contraseña</p>
+            <input type="password" id="des-ubi" placeholder="Contraseña..." class="input-agregar-cafe" [(ngModel)]="usuario.contrasena" name="contrasena">
+            
+            <button class="button-login">Agregar</button>
+        </form>
+    </div>
+
+</section>

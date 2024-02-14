@@ -1,0 +1,38 @@
+    <section class="main-cafe-container">
+        <div class="cards-cafe-container">
+            
+         
+            <div class="cafe-card" *ngFor="let cafeteria of cafeterias; let i=index">
+                <a (click)="productosCafeteria(cafeteria.id)">
+                    <img src="{{ cafeteria.imagen }}" alt="">
+                    <div>
+                        <p class="title-cafe-info">{{ cafeteria.nombre }}</p>
+                        <p class="description-cafe-info">{{ cafeteria.descripcion }}</p>
+                    </div>
+                    <div class="cafe-info">
+                        <div>
+                            <p class="dir-cafe-info">{{ cafeteria.direccion }}</p>
+                        </div>
+                        <div>
+                            <p class="text-cal">Calificación</p>
+                            <p class="cal-cafe-info">{{ suma[i] }}</p>
+                        </div>
+                        
+                    </div>
+                </a>
+               
+                <div class="container-icons">
+                    <a (click)="resenacafeteria(cafeteria.id)" class="icon-img"><img src="../../assets/icons8-tema-muy-popular-50.png" alt="" ></a>
+                  
+                </div>
+                
+        
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+

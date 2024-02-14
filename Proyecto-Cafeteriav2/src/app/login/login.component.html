@@ -1,0 +1,28 @@
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+<div class="login">
+    <div class="form-container-login">
+        
+        <form (submit)="onSubmit()" class="form-login">
+        
+            <p class="title-login">Iniciar Sesion</p>
+        
+            <label for="email" class="label-login">Email address</label>
+            <input type="email" id="email" placeholder="ejemplo@gmail.com" class="input-login" [(ngModel)]="usuario.correoElectronico" name="correoElectronico">
+
+            <label for="new-password" class="label-login">Password</label>
+            <input type="password" id="new-password" placeholder="*********" class="input-login" [(ngModel)]="usuario.contrasena" name="contrasena">
+        
+            
+            <button class="button-login">Entrar</button>
+            
+        </form>
+        <button  (click)="registrar()" class="button-login">Registrar</button>
+
+        
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+<div class="container">
+
+    <div *ngIf="tipo=='1'">
+    <div class="agregar-container">
+            
+        <form  (ngSubmit)="onSubmit()" class="form-crud-cafe">
+            <h2 class="title-agregar">Datos Cafeteria</h2>
+            <p class="img-cafe">Link img</p>
+            <input type="text" id="img-cafe" placeholder="Link de la imagen" class="input-agregar-cafe" [(ngModel)]="cafeteria.imagen" name="imagen">
+            <p class="nombre-cafe">Nombre</p>
+            <input type="text" id="nom-cafe" placeholder="Nombre de la Cafeteria" class="input-agregar-cafe" [(ngModel)]="cafeteria.nombre" name="nombre">
+            <p class="ubi-cafe">Ubicación</p>
+            <input type="text" id="des-ubi" placeholder="Ubicación de la Cafeteria" class="input-agregar-cafe" [(ngModel)]="cafeteria.direccion" name="direccion">
+            <p class="descripcion-cafe">Descripción</p>
+            <input type="text" id="des-cafe" placeholder="Descripción de la Cafeteria" class="input-agregar-cafe" [(ngModel)]="cafeteria.descripcion"  name="descripcion">
+            <button class="button-login">Actualizar</button>
+        </form>
+    </div>
+
+</div>
+    <div class="product-container">
+        
+        <div>
+            <div class="product-info">
+                <div>
+                    <figure><img src="https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></figure>
+                </div>
+                <div>
+                    <p class="name-product">{{cafeteria.nombre}}</p>
+                </div>
+            </div>
+        </div>
+
+            <div class="product-data">
+                <div>
+                    <p class="title-description-product">Descripción</p>
+                    <p class="text-description-product">{{cafeteria.descripcion}}</p>
+                </div>
+                <div>
+                    <p class="text-cal-product">Calificación</p>
+                    <p class="cal-product">{{calificacionCafeteria}}</p>
+                </div>
+                
+                
+            </div>
+
+            <div class="product-input">
+                <div>
+                    <p class="title-reseña">Reseñas</p>
+                    <textarea class="text-product-reseña">
+                        {{comentarios}}
+                    </textarea>
+                </div>
+                
+            </div>
+            
+            
+            
+    </div>
+</div>
